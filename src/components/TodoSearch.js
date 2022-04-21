@@ -2,7 +2,9 @@ import React from 'react';
 
 function TodoSearch (props){
     return (
-        <input placeholder="Seach Task..." />
+        <header className='header'>
+            <input className='TodoSearch' placeholder="Seach Task..." />
+        </header>
     );
 }
 

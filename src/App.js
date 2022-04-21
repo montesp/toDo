@@ -4,7 +4,7 @@ import { TodoSearch } from './components/TodoSearch';
 import { TodoList } from './components/TodoList';
 import { TodoItem } from './components/TodoItem';
 import { CreateTodoButton } from './CreateTodoButtom';
-// import './App.css';
+import './App.css';
 
 const todos = [
   {text:'Tarea',completed: false },
@@ -17,14 +17,16 @@ const todos = [
 function App(props) {
   return (
     <React.Fragment>
-      <TodoCounter />
       <TodoSearch/>
-      <TodoList>
-      {todos.map(todo => (
-            <TodoItem key={todo.text} text={todo.text} /> //La propiedad key que pueda conocer el render de react cada elemento
-        ))}
-      </TodoList>
-      <CreateTodoButton />
+      <TodoCounter />
+      <div className='main'>
+        <TodoList>
+        {todos.map(todo => (
+              <TodoItem key={todo.text} text={todo.text} /> //La propiedad key que pueda conocer el render de react cada elemento
+          ))}
+        </TodoList>
+        <CreateTodoButton />
+      </div>
     </React.Fragment>
   );
 }
