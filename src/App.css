@@ -5,6 +5,9 @@
   --white: #eeeeee;
   --output-line: #456EBF;
   --black: #0D0D0D;
+  --placeholder:#A5A5A5;
+  --aproved:#4caf50;
+
 }
 
 * {
@@ -56,7 +59,7 @@ body {
 }
 
 .TodoSearch::placeholder {
-  color: var(--black);
+  color: var(--placeholder);
 }
 
 .TodoSearch:focus {
@@ -99,19 +102,49 @@ body {
 
 
 .TodoItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
+  height: 90px;
   margin: 10px 0;
+  border-radius: 20px;
+  text-align: center;
   color: var(--white);
-  background-color: var(--card-background);
+  background-color: var(--card-background);  box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.15);
+  box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.15);
+}
 
+.Icon {
+  width: 20%;
+  color: var(white);
+  text-decoration: none;
+  font-size: 4.2rem;
+  font-weight: 500;
+}
+
+.Icon-check--active {
+  color: #4caf50;
+}
+
+
+.TodoItem-p {
+  width: 60%;
+  font-size: 2.5rem;
+  text-align: start;
+}
+
+.TodoItem-p--complete {
+  text-decoration: line-through;
 }
 
 .buttonTodo {
+  cursor: pointer;
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 35px;
-  height: 35px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   font-size: 2.4rem;
   border: none;
@@ -122,4 +155,8 @@ body {
 
 .buttonTodo:hover {
   outline: 1px solid var(--white);
+}
+
+.Icon-delete:hover {
+  color: red;
 }

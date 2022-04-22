@@ -11,10 +11,7 @@ import './App.css';
 const todos = [
   {text:'Tarea',completed: false },
   {text:'Tomar curso de react',completed: false },
-  {text:'Ir por comida',completed: false },
-  {text:'Sacar pasear al perro',completed: false },
-  {text:'Sacar pasear al perro',completed: false },
-  {text:'Sacar pasear al perro',completed: false },
+  {text:'Ir por comida',completed: true },
   {text:'Sacar pasear al perro',completed: false },
 
 ]
@@ -30,7 +27,7 @@ function App(props) {
       <Main>
         <TodoList>
         {todos.map(todo => (
-              <TodoItem key={todo.text} text={todo.text} /> //La propiedad key que pueda conocer el render de react cada elemento
+              <TodoItem key={todo.text} text={todo.text} completed={todo.completed} /> //La propiedad key que pueda conocer el render de react cada elemento
           ))}
         </TodoList>
         <CreateTodoButton />
