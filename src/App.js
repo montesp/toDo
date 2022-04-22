@@ -13,6 +13,9 @@ const todos = [
   {text:'Tomar curso de react',completed: false },
   {text:'Ir por comida',completed: false },
   {text:'Sacar pasear al perro',completed: false },
+  {text:'Sacar pasear al perro',completed: false },
+  {text:'Sacar pasear al perro',completed: false },
+  {text:'Sacar pasear al perro',completed: false },
 
 ]
 
