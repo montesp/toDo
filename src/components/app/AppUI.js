@@ -3,10 +3,12 @@ import { TodoCounter } from '../TodoCounter';
 import { TodoSearch } from '../TodoSearch';
 import { TodoList } from '../TodoList';
 import { TodoItem } from '../TodoItem';
-import { CreateTodoButton } from '../CreateTodoButtom';
+import { CreateTodoButton } from '../CreateTodoButton';
 import { Main } from '../Main';
 import { Header } from '../Header';
 import { TodoContext } from "../../contexts/todoContext";
+import { Modal } from "../../modal/TodoModal";
+
 import '../../styles/App.css';
 
 function AppUI(){
@@ -16,6 +18,8 @@ function AppUI(){
     searchedTodos,
     completeTodo,
     deleteTodo,
+    openModal,
+    setOpenModal,
   } = React.useContext(TodoContext);
 
     return(
@@ -39,7 +43,16 @@ function AppUI(){
               /> //La propiedad key que pueda conocer el render de react cada elemento
             ))}
         </TodoList>
-        <CreateTodoButton />
+
+        {!!openModal && (
+          <Modal>
+            <p>{searchedTodos[0].text}</p>
+          </Modal>
+        )}
+
+        <CreateTodoButton
+           setOpenModal={setOpenModal}
+         />
       </Main>
     </React.Fragment>
     )

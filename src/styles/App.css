@@ -139,6 +139,7 @@ body {
 }
 
 .buttonTodo {
+  z-index: 2;
   cursor: pointer;
   position: fixed;
   bottom: 20px;
