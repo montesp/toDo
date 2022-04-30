@@ -10,6 +10,7 @@ import { TodoContext } from "../../contexts/todoContext";
 import { Modal } from "../../modal/TodoModal";
 
 import '../../styles/App.css';
+import { TodoForm } from "../../modal/TodoForm";
 
 function AppUI(){
   const {
@@ -46,7 +47,7 @@ function AppUI(){
 
         {!!openModal && (
           <Modal>
-            <p>{searchedTodos[0].text}</p>
+            <TodoForm></TodoForm>
           </Modal>
         )}
 

@@ -5,13 +5,7 @@ function CreateTodoButton(props){
     const {setOpenModal, openModal} = useContext(TodoContext)
 
     const onClickButton = () => {
-        console.log(openModal);
-        if(openModal){
-            setOpenModal(false);
-        } else {
-            setOpenModal(true);
-        }
-
+        setOpenModal(prevState=> !prevState)
     }
 
     return(
